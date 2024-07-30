@@ -28,28 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.addButton = new System.Windows.Forms.Button();
             this.distanceText = new System.Windows.Forms.TextBox();
             this.timeText = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(26, 287);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(12, 300);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(927, 300);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -57,9 +61,9 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(301, 47);
+            this.addButton.Location = new System.Drawing.Point(12, 99);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(271, 26);
+            this.addButton.Size = new System.Drawing.Size(406, 32);
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
@@ -67,19 +71,37 @@
             // 
             // distanceText
             // 
-            this.distanceText.Location = new System.Drawing.Point(12, 47);
+            this.distanceText.Location = new System.Drawing.Point(6, 23);
             this.distanceText.Name = "distanceText";
             this.distanceText.Size = new System.Drawing.Size(150, 26);
             this.distanceText.TabIndex = 3;
-            this.distanceText.Text = "Distance";
             // 
             // timeText
             // 
-            this.timeText.Location = new System.Drawing.Point(168, 47);
+            this.timeText.Location = new System.Drawing.Point(6, 23);
             this.timeText.Name = "timeText";
             this.timeText.Size = new System.Drawing.Size(127, 26);
             this.timeText.TabIndex = 4;
-            this.timeText.Text = "Time";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.distanceText);
+            this.groupBox1.Location = new System.Drawing.Point(12, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 60);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Distance";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.timeText);
+            this.groupBox2.Location = new System.Drawing.Point(218, 24);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 60);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Time";
             // 
             // Form1
             // 
@@ -87,17 +109,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1260, 801);
-            this.Controls.Add(this.timeText);
-            this.Controls.Add(this.distanceText);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.chart1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Click += new System.EventHandler(this.Main);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -106,6 +131,8 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.TextBox distanceText;
         private System.Windows.Forms.TextBox timeText;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
