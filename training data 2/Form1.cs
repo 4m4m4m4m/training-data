@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -33,7 +34,8 @@ namespace training_data_2
             // Append text to an existing file named "WriteLines.txt".
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt"), true))
             {
-                outputFile.WriteLine(textBox1.Text);
+                DateTime dateTime = DateTime.Today;
+                outputFile.WriteLine(dateTime.ToString("d", CultureInfo.CreateSpecificCulture("ru-RU")) + " " + distanceText.Text + " " + timeText.Text);
             }
         }
     }
