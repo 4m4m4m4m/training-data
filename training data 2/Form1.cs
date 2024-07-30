@@ -33,7 +33,7 @@ namespace training_data_2
             // Append text to an existing file named "WriteLines.txt".
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt"), true))
             {
-                outputFile.WriteLine("Fourth Line");
+                outputFile.WriteLine(textBox1.Text);
             }
         }
     }
