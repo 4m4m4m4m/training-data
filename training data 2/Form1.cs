@@ -55,7 +55,8 @@ namespace training_data_2
         private String[][] readFile(string filePath)
         {
             //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader("WriteLines.txt");
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            StreamReader sr = new StreamReader(Path.Combine(docPath, "WriteLines.txt"));
             //variables
             String line;
             string[] splitline = new string[3];

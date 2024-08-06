@@ -54,7 +54,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(927, 322);
+            this.chart1.Size = new System.Drawing.Size(927, 512);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -105,7 +105,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(629, 540);
+            this.button1.Location = new System.Drawing.Point(673, 725);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(266, 33);
             this.button1.TabIndex = 8;
