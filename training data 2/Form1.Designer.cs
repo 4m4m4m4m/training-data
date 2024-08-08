@@ -47,13 +47,16 @@
             // 
             // chart1
             // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(12, 171);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(2204, 1073);
+            this.chart1.Size = new System.Drawing.Size(1496, 710);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -104,9 +107,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1907, 1250);
+            this.button1.Location = new System.Drawing.Point(1169, 887);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 33);
+            this.button1.Size = new System.Drawing.Size(339, 40);
             this.button1.TabIndex = 8;
             this.button1.Text = "Update Chart";
             this.button1.UseVisualStyleBackColor = true;
@@ -120,8 +123,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(2228, 1311);
+            this.ClientSize = new System.Drawing.Size(1520, 939);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.chart1);
