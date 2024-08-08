@@ -43,16 +43,25 @@ namespace training_data_2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            chart1.ChartAreas.Add(new ChartArea());
-            String[][] lines = readFile("C:\\Documents\\WriteLines.txt");
-            var series = new Series();
-            series.Points.AddXY(1.0, lines[1][0]);
-            series.Points.AddXY(2.0, 48);
-            series.Points.AddXY(3.0, 53.0);
-            chart1.Series.Add(series);
+            chart1.Series.Clear();
+            String[][] lines = readFile();
+            var seriesdist = new Series();
+            var seriestime = new Series();
+            for (int i = 0; i < lines[0].Length; i++)
+            {
+            seriesdist.Points.AddXY(lines[0][i], lines[1][i]);
+            seriestime.Points.AddXY(lines[0][i], lines[2][i]);
+            }
+            chart1.Series.Add(seriesdist);
+            chart1.Series.Add(seriestime);
+            //chart1.Series[0].Points.Clear();
+            chart1.Series[0].ChartType = SeriesChartType.Line;
+            chart1.Series[0].Name = "Distance";
+            chart1.Series[1].ChartType = SeriesChartType.Line;
+            chart1.Series[1].Name = "Time";
             
         }
-        private String[][] readFile(string filePath)
+        private String[][] readFile()
         {
             //Pass the file path and file name to the StreamReader constructor
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -60,7 +69,7 @@ namespace training_data_2
             //variables
             String line;
             string[] splitline = new string[3];
-            var numlines = File.ReadLines("WriteLines.txt").Count();
+            var numlines = File.ReadLines(Path.Combine(docPath, "WriteLines.txt")).Count();
             string[] Date = new string[numlines];
             string[] Distance = new string[numlines];
             string[] Time = new string[numlines];
@@ -69,15 +78,15 @@ namespace training_data_2
             splitline = line.Split(' ');
             //Continue to read until you reach end of file
             int i = 0;
-            while (line != null)
+            while (i <= numlines - 1)
             { 
-                //read the next line
                 //split the line in 3
                 splitline = line.Split(' ');
                 //get all of the 
                 Date[i] = splitline[0];
                 Distance[i] = splitline[1];
                 Time[i] = splitline[2];
+                //read the next line
                 line = sr.ReadLine();
                 i++;
             }
