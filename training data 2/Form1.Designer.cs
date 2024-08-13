@@ -37,7 +37,6 @@
             this.timeText = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -56,7 +55,7 @@
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(12, 171);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(1496, 710);
+            this.chart1.Size = new System.Drawing.Size(1496, 756);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -105,16 +104,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Time";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1169, 887);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(339, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Update Chart";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // programBindingSource
             // 
             this.programBindingSource.DataSource = typeof(training_data_2.Program);
@@ -126,7 +115,6 @@
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1520, 939);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.groupBox1);
@@ -153,7 +141,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.BindingSource programBindingSource;
-        private System.Windows.Forms.Button button1;
     }
 }
 
