@@ -41,6 +41,8 @@ namespace training_data_2
                 outputFile.WriteLine(dateTime.ToString("d", CultureInfo.CreateSpecificCulture("ru-RU")) + " " + distanceText.Text + " " + timeText.Text);
             }
             updateChart();
+            distanceText.Text = String.Empty;
+            timeText.Text = String.Empty;
         }
 
         private void button1_Click_1(object sender, EventArgs e)

@@ -53,9 +53,9 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 171);
+            this.chart1.Location = new System.Drawing.Point(12, 154);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(1496, 756);
+            this.chart1.Size = new System.Drawing.Size(1496, 773);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
